@@ -1,0 +1,303 @@
+/* General Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+}
+
+
+/* Header */
+
+header {
+    background: #111827;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+
+/* Home */
+
+.home {
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10%;
+    background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+}
+
+.home-text {
+    max-width: 600px;
+}
+
+.home-text h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.home-text h1 span {
+    color: #0284c7;
+}
+
+.home-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* Profile Image */
+
+.profile img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid white;
+    box-shadow: 0 5px 25px #999;
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background: #0284c7;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #0369a1;
+}
+
+
+/* Common Section */
+
+section {
+    padding: 70px 10%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #111827;
+}
+
+
+/* About */
+
+.about-box {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px #ddd;
+}
+
+.about-box h3 {
+    margin-bottom: 15px;
+    color: #0284c7;
+}
+
+.about-box p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+
+/* Skills */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px #ddd;
+}
+
+.skill h3 {
+    color: #0284c7;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    line-height: 1.5;
+}
+
+
+/* Projects */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px #ddd;
+}
+
+.project h3 {
+    color: #0284c7;
+    margin-bottom: 15px;
+}
+
+.project p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Resume */
+
+#resume {
+    text-align: center;
+    background: #e0f2fe;
+}
+
+#resume p {
+    margin-bottom: 25px;
+}
+
+
+/* Contact */
+
+.contact-box {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px #ddd;
+}
+
+.contact-box p {
+    margin: 15px 0;
+}
+
+
+/* Footer */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .home-text h1 {
+        font-size: 35px;
+    }
+
+    .profile img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 50px 6%;
+    }
+}
